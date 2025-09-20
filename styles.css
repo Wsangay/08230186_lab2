@@ -1,0 +1,285 @@
+/* ========== GLOBAL STYLES ========== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+header {
+  background: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.8rem;
+  animation: slideDown 0.6s ease-in-out;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s, transform 0.3s;
+}
+
+nav a:hover {
+  color: #f0db4f;
+  transform: scale(1.1);
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ========== HERO SECTION ========== */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  color: white;
+  animation: fadeUp 1s ease-in;
+}
+
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* ========== IMAGES & CARDS ========== */
+.profile-img {
+  display: block;
+  margin: 0 auto 20px auto; /* centers image */
+  width: 180px;             /* adjust size */
+  height: 180px;
+  border-radius: 50%;       /* makes it circular */
+  object-fit: cover;        /* crops nicely */
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.village-img {
+  width: 250px;               /* bigger rectangle size */
+  border-radius: 12px;        /* slight rounded corners (optional) */
+  display: block;
+  margin: 20px auto;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2); /* adds depth */
+}
+
+.village-img:hover {
+  transform: scale(1.05);     /* zoom effect */
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3); /* stronger shadow on hover */
+}
+
+.project-card {
+  max-width: 750px;
+  margin: 20px auto;
+  padding: 20px;
+  background: #ffffffd9;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.project-card h3 {
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.project-card p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin: 8px 0;
+}
+
+.project-card strong {
+  color: #1a73e8;
+}
+
+
+/* ========== PAGE BACKGROUNDS ========== */
+.about-bg {
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
+}
+
+.education-img {
+  display: block;
+  margin: 10px auto 0 auto;
+  max-width: 250px; /* smaller width */
+  width: 100%;      /* makes it responsive */
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.education-img:hover {
+  transform: scale(1.05);
+}
+
+.education-list {
+  list-style: none;
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 0;
+  font-size: 1.1rem;
+}
+
+.education-list li {
+  background: white;
+  margin: 10px 0;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.education-list li img.school-img {
+  max-width: 150px;
+  margin-left: 25px;
+  border-radius: 10px;
+}
+
+.education-list li:hover {
+  transform: translateY(-3px);
+}
+
+.skills-bg {
+  background: linear-gradient(to right, #f6d365, #fda085);
+}
+
+.skills-section {
+  max-width: 700px;
+  margin: 30px auto;
+  background: #ffffffd9;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.skills-section h3 {
+  margin-bottom: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.skills-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 12px;
+}
+
+.skills-list li {
+  background: #f9f9f9;
+  padding: 12px;
+  border-radius: 10px;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.skills-list li:hover {
+  transform: translateY(-4px);
+}
+
+.skills-list i {
+  font-size: 1.3rem;
+  color: #4CAF50; /* green for consistency */
+}
+
+
+.projects-bg {
+  background: linear-gradient(to right, #84fab0, #8fd3f4);
+}
+
+.contact-bg {
+  background: linear-gradient(to right, #d4fc79, #96e6a1);
+}
+
+.aspiration-bg {
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+}
+
+/* ========== ASPIRATION PAGE STYLES ========== */
+.aspiration-text {
+  max-width: 700px;
+  margin: 20px auto;
+  font-size: 1.2rem;
+  text-align: center;
+  padding: 15px;
+  animation: fadeUp 1s ease;
+}
+
+.aspiration-card {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  text-align: left;
+}
+
+/* ========== CONTACT FORM STYLES ========== */
+form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  animation: fadeUp 1s ease;
+}
+
+input, textarea, button {
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  transition: box-shadow 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+button {
+  background: #333;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background: #555;
+}
+
+/* ========== RESPONSIVENESS ========== */
+@media (max-width: 768px) {
+  nav a {
+    display: block;
+    margin: 10px 0;
+  }
+}
